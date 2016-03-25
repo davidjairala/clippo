@@ -25,7 +25,7 @@ class Uploader
     end
 
     def file
-      @file ||= bucket.object(@result.filename)
+      @file ||= bucket.object(filename)
     end
 
     def upload_file
@@ -33,7 +33,7 @@ class Uploader
       s3.put_object({
         body: @result.data,
         bucket: bucket_name,
-        key: @result.filename
+        key: filename
       })
     end
 
@@ -52,6 +52,14 @@ class Uploader
 
         b
       end
+    end
+
+    def filename
+      "#{dir}/#{@result.filename}"
+    end
+
+    def dir
+      @dir ||= Time.now.strftime("%Y-%m-%d")
     end
 
     def bucket_name
