@@ -59,7 +59,7 @@ cp -Rf clippo.workflow ~/Library/Services/
 
 Then go into `System Preferences -> Keyboard -> Shortcuts -> Services`:
 
-![clippo shortcut](https://davidjairala-notes.s3-us-west-1.amazonaws.com/2016-03-25/1458946262__4707548.png)
+![](https://davidjairala-notes.s3-us-west-1.amazonaws.com/2016-03-25/1458946262__4707548.png)
 
 And assign the desired keyboard shortcut combo.
 
