@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'active_support/core_ext/object/blank'
-
 require_relative File.join('lib', 'clipboard_fetcher')
 require_relative File.join('lib', 'uploader')
 

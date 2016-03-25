@@ -31,7 +31,7 @@ Copy some text or a screenshot into your clipboard that you want to share
 and then run clippo:
 
 ```bash
-./clippo
+clippo
 
 Uploaded to (and copied to clipboard):
 https://davidjairala-notes.s3-us-west-1.amazonaws.com/2016-03-25/1458940549__196287852.png
@@ -43,6 +43,11 @@ url is then copied to the clipboard as well so you can share it easily.
 All uploaded files are placed within the bucket you specify in the
 `config/config.yml` file and within folders for the date you uploaded
 the file in the format `YYYY-MM-DD`.
+
+
+Included you'll also find `clippo.sh` that you can move to wherever you
+keep executable shortcuts in your path (`~/bin` for example), so you can
+invoke clippo from everywhere!
 
 # Help
 
