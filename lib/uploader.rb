@@ -42,11 +42,11 @@ class Uploader
         s3 = Aws::S3::Resource.new(base_config)
         b = s3.bucket(bucket_name)
 
-        if !b
+        unless b
           b = s3.create_bucket(bucket: bucket_name)
         end
 
-        if !b.exists?
+        unless b.exists?
           b.create
         end
 
