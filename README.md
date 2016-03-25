@@ -49,6 +49,20 @@ Included you'll also find `clippo.sh` that you can move to wherever you
 keep executable shortcuts in your path (`~/bin` for example), so you can
 invoke clippo from everywhere!
 
+**To run with a global shortcut:**
+
+Copy the included `clippo.workflow` folder to `~/Library/Services`:
+
+```bash
+cp -Rf clippo.workflow ~/Library/Services/
+```
+
+Then go into `System Preferences -> Keyboard -> Shortcuts -> Services`:
+
+![clippo shortcut](https://davidjairala-notes.s3-us-west-1.amazonaws.com/2016-03-25/1458946262__4707548.png)
+
+And assign the desired keyboard shortcut combo.
+
 # Help
 
 Hit me up here.
