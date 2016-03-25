@@ -1,5 +1,15 @@
 # Installation
 
+1. Clone the project
+
+```bash
+git clone git@github.com:davidjairala/clippo.git
+cd clippo
+
+rbenv install
+bundle
+```
+
 1. Install requirements
 
 ```bash
