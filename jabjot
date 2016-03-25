@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require 'active_support/core_ext/object/blank'
+
+require_relative File.join('lib', 'clipboard_fetcher')
+require_relative File.join('lib', 'uploader')
+
+class Syncer
+
+  class << self
+
+    def root
+      File.expand_path(File.dirname(__FILE__))
+    end
+
+  end
+
+  def upload
+    result = clipboard_fetcher.get
+    
+    unless result
+      puts "No data to paste/upload found!"
+      abort
+    end
+
+    uploader = Uploader.new(result)
+    url = uploader.upload
+
+    unless url
+      puts "Unable to upload file!"
+      abort
+    end
+
+    clipboard_fetcher.set(url)
+
+    puts "Uploaded to (and copied to clipboard):"
+    puts url
+  end
+
+  private
+
+    def clipboard_fetcher
+      @clipboard_fetcher ||= ClipboardFetcher.new
+    end
+
+end
+
+Syncer.new.upload
